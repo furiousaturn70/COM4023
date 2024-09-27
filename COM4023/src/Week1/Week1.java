@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package com4023;
+package Week1;
 
 /**
  *
  * @author Andrew
  */
-public class COM4023 {
+public class Week1 {
 
     /**
      * @param args the command line arguments
