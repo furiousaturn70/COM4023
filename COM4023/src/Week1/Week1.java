@@ -14,7 +14,10 @@ public class Week1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        // Exercise 1
         System.out.println("Hello World");
+        
+        
     }
     
 }
