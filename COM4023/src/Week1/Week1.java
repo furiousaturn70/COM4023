@@ -1,6 +1,8 @@
 package Week1;
 
 import java.util.Scanner;
+import java.time.LocalDate;
+import java.time.Period;
 
 /**
  *
@@ -55,17 +57,39 @@ public class Week1 {
        
        //Exercise 6
        int age;
-       
        System.out.println("Input your age:");
        name=reader.nextLine();
        age=Integer.parseInt(name);
-       
        int currentYear = java.time.LocalDate.now().getYear();
        int birthYear = currentYear - age;
-
        System.out.println("You were born in " + birthYear);
 
        
+       //Exercise 7
+       System.out.println("Enter your birth year: ");
+       name=reader.nextLine();
+       birthYear=Integer.parseInt(name);
+
+       System.out.println("Enter your birth month (1-12): ");
+       name=reader.nextLine();
+       int birthMonth=Integer.parseInt(name);
+
+       System.out.println("Enter your birth day (1-31): ");
+       name=reader.nextLine();
+       int birthDay=Integer.parseInt(name);
+
+       LocalDate birthDate = LocalDate.of(birthYear, birthMonth, birthDay);
+       LocalDate currentDate = LocalDate.now();
+       Period period = Period.between(birthDate, currentDate);
+
+       int daysOld = period.getYears() * 365 + period.getMonths() * 30 + period.getDays();
+       System.out.println("You are " + daysOld + " days old.");
+
+            
+
+
+
+       //used reader for various exercises, now closing it
        reader.close();
     }
     
