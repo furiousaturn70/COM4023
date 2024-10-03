@@ -35,13 +35,13 @@ public class Week1 {
        System.out.println("Area="+(length*height));
        
        //Exercise 4
-       float num1, num2;
+       double num1, num2;
        System.out.println("Enter number 1:");
        name=reader.nextLine();
-       num1=Float.parseFloat(name);
+       num1=Double.parseDouble(name);
        System.out.println("Enter number 2:");
        name=reader.nextLine();
-       num2=Float.parseFloat(name);
+       num2=Double.parseDouble(name);
        System.out.println("Average of numbers is: "+((num1+num2)/2));
        
        //Exercise 5
@@ -85,10 +85,14 @@ public class Week1 {
        int daysOld = period.getYears() * 365 + period.getMonths() * 30 + period.getDays();
        System.out.println("You are " + daysOld + " days old.");
 
-            
-
-
-
+       //Exercise 8
+       System.out.println("Enter number of feet: ");
+       name=reader.nextLine();
+       double feet=Double.parseDouble(name);
+       double miles = feet/5280;
+       System.out.printf("%.2f feet is equal to %.2f miles",feet,miles);
+       System.out.println();
+       
        //used reader for various exercises, now closing it
        reader.close();
     }
