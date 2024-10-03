@@ -93,6 +93,10 @@ public class Week1 {
        System.out.printf("%.2f feet is equal to %.2f miles",feet,miles);
        System.out.println();
        
+       //Exercise 9
+       
+       
+       
        //used reader for various exercises, now closing it
        reader.close();
     }
