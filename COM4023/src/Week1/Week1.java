@@ -54,8 +54,19 @@ public class Week1 {
        System.out.println("Reverse Order: "+number2+","+number1);
        
        //Exercise 6
+       int age;
        
+       System.out.println("Input your age:");
+       name=reader.nextLine();
+       age=Integer.parseInt(name);
        
+       int currentYear = java.time.LocalDate.now().getYear();
+       int birthYear = currentYear - age;
+
+       System.out.println("You were born in " + birthYear);
+
+       
+       reader.close();
     }
     
 }
