@@ -94,9 +94,19 @@ public class Week1 {
        System.out.println();
        
        //Exercise 9
+       System.out.print("Enter the deposit amount: ");
+       name=reader.nextLine();
+       double depositAmount = Double.parseDouble(name);
        
-       
-       
+       double interestRate = 0.01; // 1% interest rate
+       double interest = depositAmount * interestRate;
+
+       // Calculate the total amount after interest
+       double totalAmount = depositAmount + interest;
+
+       // Display the result
+       System.out.println("Total amount after interest: " + totalAmount);
+              
        //used reader for various exercises, now closing it
        reader.close();
     }
