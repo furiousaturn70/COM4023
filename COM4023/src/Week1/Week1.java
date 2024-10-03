@@ -18,7 +18,7 @@ public class Week1 {
         // Exercise 2
        Scanner reader = new Scanner(System.in);
        String name=reader.nextLine();
-       System.out.println("Your name is "+ name);
+       System.out.println("Your name was "+ name);
     }
     
 }
