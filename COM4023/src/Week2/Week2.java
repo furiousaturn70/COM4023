@@ -51,7 +51,7 @@ public class Week2 {
       for (int loop=1;loop<=12;loop++){
           System.out.println(loop+"*7="+loop*7);
       }
-    
+   
       //Exercise 5
       int table;
       Scanner reader1 = new Scanner(System.in);
@@ -62,6 +62,19 @@ public class Week2 {
       for (int loop=1;loop<=12;loop++){
           System.out.println(loop+"*"+table+"="+(loop*table));
       }
+      
+      //Exercise 6
+      Scanner reader2 = new Scanner(System.in); 
+      do {
+            System.out.println("Which Times-table (2-12),0 to end:");
+            name=reader2.nextLine();
+            table=Integer.parseInt(name);
+            for (int loop=1;loop<=12;loop++){
+               System.out.println(loop+"*"+table+"="+(loop*table));
+            }
+         }
+      while (table != 0);
+      System.out.println("Goodbye!");
     }   
     
 }
