@@ -32,19 +32,33 @@ public class MusicList {
         this.musicList.clear();
     }
     
-   public boolean removeSong(String songTitle){
+   public void removeSong(String songTitle){
         //needs working out here   
-        return false;
-    }
-   
-   public boolean setSongPlays(String songTitle, int songPlays){
-       //needs working out here
-       return false;
    }
    
+   public void setSongPlays(String songTitle, int songPlays){
+       //needs working out here
+   }
    
+   public void printAbovePlays(int songPlays){
+       //needs working out here
+      
+   }
    
+   public Song findByArtist(String songArtist){
+       //needs working out here
+        return null;
+
+   }
    
+   public Song getRandomSong(){
+       //needs working out here
+       return null;
+   }
+   
+   public void printMusicList(){
+       //needs working out here
+   }
    
    
    
