@@ -30,24 +30,33 @@ public class Song {
         this.playBack = playBack;    
     }
     
-   
-    /**
-     * @method: get the artists name 
-     * @return artistName 
-     */
+    public String getTitle(){
+        return this.songTitle;
+    }
+    
+    public int getPlayBack(){
+        return this.playBack;
+    }
+    
     public String getArtistName(){
       return this.artistName;  
     }
     
-    /**
-     * @method: set artist name
-     * @param artistName 
-     */
     public void setArtistName(String artistName){
         this.artistName=artistName;
     }
     
+    public void setTitle(String newTitle){
+        this.songTitle=newTitle;
+    }
     
+    public void setPlays(int newPlays){
+        this.playBack=newPlays;
+    }
+    
+    public void printSong(){
+        System.out.println(this.songTitle + "," + this.artistName + "," + this.playBack);
+    }    
     
 }    
     
