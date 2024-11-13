@@ -19,7 +19,7 @@ public class MusicList {
      * Constructor
      */
     public MusicList() {
-
+        this.musicList=new ArrayList<>();
     }
 
     public void addSong(Song song) {
@@ -47,6 +47,7 @@ public class MusicList {
     }
 
     public boolean setSongPlays(String songTitle, int songPlays) {
+
         boolean foundSong = false;
         for (int index = 0; index < musicList.size(); index++) {
             Song currentSong = musicList.get(index);
@@ -74,14 +75,18 @@ public class MusicList {
         }
     }
 
-    public Song findByArtist(String songArtist) {
+    public void findByArtist(String songArtist) {
+        boolean found = false;
         for (int index = 0; index < musicList.size(); index++) {
             Song currentSong = musicList.get(index);
-            if (currentSong.getArtistName().equalsIgnoreCase(songArtist)) {
-                return currentSong;
+            if (currentSong.getArtistName().equalsIgnoreCase(songArtist)){
+                currentSong.printSong();
+                found=true;
             }
         }
-        return null;
+        if (found==false){
+            System.out.println("Artist not found!!");
+        }
     }
 
     public Song getRandomSong() {
