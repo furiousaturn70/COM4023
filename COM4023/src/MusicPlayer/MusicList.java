@@ -4,6 +4,8 @@
  */
 package MusicPlayer;
 import java.util.ArrayList;
+import java.util.Random;
+
 /**
  *
  * @author amstephenson
@@ -32,33 +34,39 @@ public class MusicList {
         this.musicList.clear();
     }
     
-   public void removeSong(String songTitle){
+    public void removeSong(String songTitle){
         //needs working out here   
-   }
+    }
    
-   public void setSongPlays(String songTitle, int songPlays){
+    public void setSongPlays(String songTitle, int songPlays){
        //needs working out here
-   }
+    }
    
-   public void printAbovePlays(int songPlays){
+    public void printAbovePlays(int songPlays){
        //needs working out here
       
-   }
+    }
    
-   public Song findByArtist(String songArtist){
-       //needs working out here
+    public Song findByArtist(String songArtist){
+        for (int index=0;index < musicList.size();index++){
+            Song currentSong=musicList.get(index);
+            if (currentSong.getArtistName().equalsIgnoreCase(songArtist)){
+                return currentSong;
+            }
+        }
         return null;
-
-   }
+    }
    
-   public Song getRandomSong(){
-       //needs working out here
-       return null;
-   }
+    public Song getRandomSong(){
+       Random rand = new Random();
+       int n = rand.nextInt(this.musicList.size());
+       Song randomSong = this.musicList.get(n);
+       return randomSong;
+    }
    
-   public void printMusicList(){
+    public void printMusicList(){
        //needs working out here
-   }
+    }
    
    
    
