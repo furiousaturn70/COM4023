@@ -14,7 +14,6 @@ public class MusicList {
 
     private ArrayList<Song> musicList;
 
-
     /**
      * Constructor
      */
@@ -34,7 +33,7 @@ public class MusicList {
         this.musicList.clear();
     }
 
-    public boolean removeSong(String songTitle) {
+    public void removeSong(String songTitle) {
         boolean removedSong = false;
         for (int index = 0; index < musicList.size(); index++) {
             Song currentSong = musicList.get(index);
@@ -43,10 +42,12 @@ public class MusicList {
                 removedSong = true;
             }
         }
-        return removedSong;
+        if (removedSong==false){
+            System.out.println("Cannot remove as song does not exist!!");
+        }
     }
 
-    public boolean setSongPlays(String songTitle, int songPlays) {
+    public void setSongPlays(String songTitle, int songPlays) {
 
         boolean foundSong = false;
         for (int index = 0; index < musicList.size(); index++) {
@@ -57,7 +58,9 @@ public class MusicList {
             }
 
         }
-        return foundSong;
+        if (foundSong==false){
+            System.out.println("Cannot find the SongTitle!!")
+        }
     }
 
 
