@@ -34,8 +34,16 @@ public class MusicList {
         this.musicList.clear();
     }
     
-    public void removeSong(String songTitle){
-        //needs working out here   
+    public boolean removeSong(String songTitle){
+        removedSong = false;
+        for (int index=0;index<musicList.size();index++){
+            Song currentSong = musicList.get(index);
+            if (currentSong.getTitle().equalsIgnoreCase(songTitle)){
+                musicList.remove(index);
+                removedSong = true;
+            }
+        }
+        return removedSong;
     }
    
     public void setSongPlays(String songTitle, int songPlays){
