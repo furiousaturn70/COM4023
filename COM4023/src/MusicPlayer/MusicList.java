@@ -11,77 +11,90 @@ import java.util.Random;
  * @author amstephenson
  */
 public class MusicList {
-   
+
     private ArrayList<Song> musicList;
-    
-    
+
+
     /**
      * Constructor
      */
-    public MusicList(){
-        
+    public MusicList() {
+
     }
-    
-    public void addSong(Song song){
+
+    public void addSong(Song song) {
         this.musicList.add(song);
     }
-      
-    public int getMusicListSize(){
+
+    public int getMusicListSize() {
         return this.musicList.size();
     }
-    
-    public void clearMusicList(){
+
+    public void clearMusicList() {
         this.musicList.clear();
     }
-    
-    public boolean removeSong(String songTitle){
-        removedSong = false;
-        for (int index=0;index<musicList.size();index++){
+
+    public boolean removeSong(String songTitle) {
+        boolean removedSong = false;
+        for (int index = 0; index < musicList.size(); index++) {
             Song currentSong = musicList.get(index);
-            if (currentSong.getTitle().equalsIgnoreCase(songTitle)){
+            if (currentSong.getTitle().equalsIgnoreCase(songTitle)) {
                 musicList.remove(index);
                 removedSong = true;
             }
         }
         return removedSong;
     }
-   
-    public void setSongPlays(String songTitle, int songPlays){
-       //needs working out here
+
+    public boolean setSongPlays(String songTitle, int songPlays) {
+        boolean foundSong = false;
+        for (int index = 0; index < musicList.size(); index++) {
+            Song currentSong = musicList.get(index);
+            if (currentSong.getTitle().equalsIgnoreCase(songTitle)) {
+                currentSong.setPlays(songPlays);
+                foundSong = true;
+            }
+
+        }
+        return foundSong;
     }
-   
-    public void printAbovePlays(int songPlays){
-       //needs working out here
-      
+
+
+    public void printAbovePlays(int songPlays) {
+        boolean foundSong = false;
+        for (int index = 0; index < musicList.size(); index++) {
+            Song currentSong = musicList.get(index);
+            if (currentSong.getPlayBack() > songPlays) {
+                currentSong.printSong();
+                foundSong = true;
+            }
+        }
+        if (foundSong == false) {
+            System.out.println("No Songs Found with Plays above " + songPlays);
+        }
     }
-   
-    public Song findByArtist(String songArtist){
-        for (int index=0;index < musicList.size();index++){
-            Song currentSong=musicList.get(index);
-            if (currentSong.getArtistName().equalsIgnoreCase(songArtist)){
+
+    public Song findByArtist(String songArtist) {
+        for (int index = 0; index < musicList.size(); index++) {
+            Song currentSong = musicList.get(index);
+            if (currentSong.getArtistName().equalsIgnoreCase(songArtist)) {
                 return currentSong;
             }
         }
         return null;
     }
-   
-    public Song getRandomSong(){
-       Random rand = new Random();
-       int n = rand.nextInt(this.musicList.size());
-       Song randomSong = this.musicList.get(n);
-       return randomSong;
+
+    public Song getRandomSong() {
+        Random rand = new Random();
+        int n = rand.nextInt(this.musicList.size());
+        Song randomSong = this.musicList.get(n);
+        return randomSong;
     }
-   
-    public void printMusicList(){
-       //needs working out here
+
+    public void printMusicList() {
+        for (int index = 0; index < musicList.size(); index++) {
+            Song currentSong = musicList.get(index);
+            currentSong.printSong();
+        }
     }
-   
-   
-   
-   
-   
-   
-   
-   
-   
 }
