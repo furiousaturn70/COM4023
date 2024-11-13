@@ -22,7 +22,7 @@ public class Song {
     
     /**
      * Constructor: Builds a Song with 
-     * with required data - artistName, songTitle, playBack
+     * required data - artistName, songTitle, playBack
      */
     public Song(String artistName, String songTitle, int playBack){
         this.artistName = artistName;
