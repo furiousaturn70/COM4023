@@ -7,7 +7,7 @@ package MusicPlayer;
 /**
  *
  * @author amstephenson
- * @version 1.0
+ * @version 2.0
  * @Purpose: class to manage a song
  */
 public class Song {
