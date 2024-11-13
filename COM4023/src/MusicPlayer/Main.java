@@ -28,6 +28,9 @@ public class Main {
         musicList.printMusicList();
         System.out.println(musicList.getMusicListSize());
         musicList.findByArtist("Genesis");
-
+        musicList.getRandomSong();
+        musicList.removeSong("Firth of Fifth");
+        System.out.println("==================");
+        musicList.printMusicList();
     }
 }

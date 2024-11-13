@@ -89,11 +89,11 @@ public class MusicList {
         }
     }
 
-    public Song getRandomSong() {
+    public void getRandomSong() {
         Random rand = new Random();
         int n = rand.nextInt(this.musicList.size());
         Song randomSong = this.musicList.get(n);
-        return randomSong;
+        randomSong.printSong();
     }
 
     public void printMusicList() {
