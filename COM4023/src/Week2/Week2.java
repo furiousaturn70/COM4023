@@ -75,6 +75,9 @@ public class Week2 {
          }
       while (table != 0);
       System.out.println("Goodbye!");
+      reader.close();
+      reader1.close();
+      reader2.close();
     }   
     
 }

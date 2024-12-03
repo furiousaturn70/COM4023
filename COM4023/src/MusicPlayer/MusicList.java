@@ -59,7 +59,7 @@ public class MusicList {
 
         }
         if (foundSong==false){
-            System.out.println("Cannot find the SongTitle!!")
+            System.out.println("Cannot find the SongTitle!!");
         }
     }
 
