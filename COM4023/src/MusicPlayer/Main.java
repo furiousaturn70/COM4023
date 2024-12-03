@@ -1,10 +1,6 @@
 package MusicPlayer;
 
-import java.util.ArrayList;
-
 public class Main {
-    private static ArrayList<Song> searchedList;
-
     public static void main(String[] args){
         //create a MusicList
         MusicList musicList=new MusicList();
