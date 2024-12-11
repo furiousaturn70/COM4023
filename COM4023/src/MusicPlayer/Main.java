@@ -7,7 +7,7 @@ public class Main {
 
         //Add Songs
         Song[] songs = new Song[10];
-        songs[0]=new Song("Genesis", "In the Beginning",1969);
+        songs[0]=new Song("G", "In the Beginning",1969);
         songs[1]=new Song("Genesis", "Where the Sour Turns to Sweet",1969);
         songs[2]=new Song("Genesis", "The Silent Sun",1969);
         songs[3]=new Song("Genesis", "Robbery, Assault and Battery",1973);
